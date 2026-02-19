@@ -1,0 +1,7 @@
+{
+  "name": "자람이 (Zaram-i)",
+  "description": "아기의 개월수에 따른 맞춤형 발달 가이드와 일상 기록을 돕는 올인원 육아 다이어리",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
