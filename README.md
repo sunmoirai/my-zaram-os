@@ -1,20 +1,32 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Zaram-i (자람이)
 
-# 자람이 (zaram-i)
+## 🇰🇷 프로젝트 소개
+자람이는 아이의 특성(수면, 언어, 운동 발달 등),  
+식단 기록, 행동 기록을 기반으로  
+룰 기반 발달 가이드를 생성하는 육아 지원 시스템입니다.
 
-아이의 월령에 맞춘 **발달 가이드(정적)** 와 **오늘의 성장 기록**을 입력할 수 있는 간단한 웹앱입니다.
+외부 AI API 없이 동작하며,  
+GitHub Actions와 AWS를 이용해 자동 배포되는 개인 프로젝트입니다.
 
-> 현재 버전은 **Gemini API 없이** 동작하도록 구성되어 있습니다.
-> 발달 가이드는 네트워크/키 없이 항상 표시되며, 대신 AI 기반의 세밀한 문장 생성/개인화는 제공되지 않습니다.
+---
 
-## Run Locally
+## 🇺🇸 Project Overview
+Zaram-i is a rule-based parenting support system.
+
+It generates personalized development guidance based on:
+- Child traits
+- Diet logs
+- Behavior records
+
+This version works fully offline (no external AI API).
+The project is deployed automatically using GitHub Actions and AWS.
+
+---
+
+## 🚀 Run Locally
+
+```bash
+npm install
+npm run dev
 
 **Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Run the app:
-   `npm run dev`
