@@ -23,27 +23,42 @@ The project is deployed automatically using GitHub Actions and AWS.
 
 ---
 
-<CI/CD 자동화 하여 내가 만든 시스템 운영하기>
+# CI/CD 자동화하여 내가 만든 시스템 운영하기
 
-1. github repository 생성
+This project demonstrates how to deploy a local React (Vite) application to AWS S3 using GitHub Actions (CI/CD automation).
 
-2. AWS S3 bucket 생성
+---
 
-3. OS push
+## 🚀 Step 1. GitHub Repository 생성
 
-로컬 프로젝트 폴더에서 
+1. GitHub에서 새로운 Repository 생성
+2. 로컬 프로젝트 폴더에서 Git 초기화
+
+```bash
 git init
 git add .
-git commit -m “init: 000000 app”
+git commit -m "init: my app"
 git branch -M main
 git remote add origin https://github.com/sunmoirai/<repo>.git
 git push -u origin main
 
+☁ Step 2. AWS S3 Bucket 생성
 
-4. yml 파일 생성
+AWS Academy 접속
 
-  github repo 에서 .yml 파일 생성(.github/workflows/deploy.yml)
+S3 → Create bucket
 
+Bucket name 설정
+
+(Academy 환경에 맞게 Public Access 설정 조정)
+
+⚙ Step 3. GitHub Actions Workflow 생성
+
+Repository에서 아래 경로에 파일 생성:
+
+.github/workflows/deploy.yml
+
+deploy.yml 내용
 name: Deploy to AWS S3 (Academy)
 
 on:
@@ -81,34 +96,42 @@ jobs:
 
     - name: Deploy build files to S3
       run: |
-        aws s3 sync dist/ s3://<mybucket name> --delete
+        aws s3 sync dist/ s3://<your-bucket-name> --delete
 
+🔐 Step 4. GitHub Secrets 설정
 
-5. README.md 작성
+GitHub Repository →
+Settings → Secrets and variables → Actions → New repository secret
 
-6. github 사이트내 Settings -> Deploy keys
+추가할 값:
+NAME                    Secret
 
-  Title=Key 입력
+AWS_ACCESS_KEY_ID
 
-  aws_access_key_id=0000000
-  aws_secret_access_key=0000000
-  aws_session_token=0000000
+AWS_SECRET_ACCESS_KEY
 
-  AWS Academy Leaders Lab 시작 페이지에서 AWS Details 클릭 후 ID, KEY, TOKEN 복사
+AWS_SESSION_TOKEN
 
+AWS Academy → AWS Details에서 발급된 값 복사
 
-8. Actions 진행 (로컬 or github)
+🔄 Step 5. Actions 실행
+방법 1: 로컬에서 실행
+git add .
+git commit -m "trigger deploy"
+git push
 
-  로컬에서
-  git add .
-  git commit -m "trigger deploy"
-  git push
+방법 2: GitHub 웹에서 실행
 
-  github 에서
-  README.md 열기
-  한줄 수정
-  Commit changes
+README.md 한 줄 수정
 
+Commit changes
 
-8. 웹사이트 연결
-  해당 버킷 클릭 -> 정적 웹 사이트 호스팅 -> 버킷 웹 사이트 엔드포인트 URL 클릭!
+Push 되면 자동으로 GitHub Actions 실행
+
+🌐 Step 6. 웹사이트 접속
+
+S3 → 해당 버킷 클릭
+Properties → Static website hosting
+→ Bucket website endpoint URL 클릭
+
+앱이 브라우저에서 열리면 배포 성공 🎉
