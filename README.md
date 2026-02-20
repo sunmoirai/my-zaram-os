@@ -55,11 +55,10 @@ Bucket name 설정
 
 ## ⚙ Step 3. GitHub Actions Workflow 생성
 
-Repository에서 아래 경로에 파일 생성:
-
-.github/workflows/deploy.yml
+Repository에서 경로에 파일 생성: .github/workflows/deploy.yml
 
 deploy.yml 내용
+
 name: Deploy to AWS S3 (Academy)
 
 on:
