@@ -34,7 +34,7 @@ This project demonstrates how to deploy a local React (Vite) application to AWS 
 1. GitHub에서 새로운 Repository 생성
 2. 로컬 프로젝트 폴더에서 Git 초기화
 
-```bash
+
 git init
 git add .
 git commit -m "init: my app"
