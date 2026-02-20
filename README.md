@@ -116,9 +116,11 @@ AWS Academy → AWS Details에서 발급된 값 복사
 
 ## 🔄 Step 5. Actions 실행
 방법 1: 로컬에서 실행
+```
 git add .
 git commit -m "trigger deploy"
 git push
+```
 
 방법 2: GitHub 웹에서 실행
 
