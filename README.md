@@ -59,6 +59,7 @@ Repository에서 경로에 파일 생성: .github/workflows/deploy.yml
 
 deploy.yml 내용
 
+```
 name: Deploy to AWS S3 (Academy)
 
 on:
@@ -97,6 +98,7 @@ jobs:
     - name: Deploy build files to S3
       run: |
         aws s3 sync dist/ s3://<your-bucket-name> --delete
+```
 
 ## 🔐 Step 4. GitHub Secrets 설정
 
