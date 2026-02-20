@@ -43,7 +43,7 @@ git remote add origin https://github.com/sunmoirai/<repo>.git
 git push -u origin main
 ```
 
-☁ Step 2. AWS S3 Bucket 생성
+## ☁ Step 2. AWS S3 Bucket 생성
 
 AWS Academy 접속
 
@@ -53,7 +53,7 @@ Bucket name 설정
 
 (Academy 환경에 맞게 Public Access 설정 조정)
 
-⚙ Step 3. GitHub Actions Workflow 생성
+## ⚙ Step 3. GitHub Actions Workflow 생성
 
 Repository에서 아래 경로에 파일 생성:
 
@@ -99,7 +99,7 @@ jobs:
       run: |
         aws s3 sync dist/ s3://<your-bucket-name> --delete
 
-🔐 Step 4. GitHub Secrets 설정
+## 🔐 Step 4. GitHub Secrets 설정
 
 GitHub Repository →
 Settings → Secrets and variables → Actions → New repository secret
@@ -114,7 +114,7 @@ AWS_SESSION_TOKEN
 
 AWS Academy → AWS Details에서 발급된 값 복사
 
-🔄 Step 5. Actions 실행
+## 🔄 Step 5. Actions 실행
 방법 1: 로컬에서 실행
 git add .
 git commit -m "trigger deploy"
@@ -128,7 +128,7 @@ Commit changes
 
 Push 되면 자동으로 GitHub Actions 실행
 
-🌐 Step 6. 웹사이트 접속
+## 🌐 Step 6. 웹사이트 접속
 
 S3 → 해당 버킷 클릭
 Properties → Static website hosting
