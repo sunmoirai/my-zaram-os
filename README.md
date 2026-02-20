@@ -42,7 +42,7 @@ git push -u origin main
 
 4. yml 파일 생성
 
-github repo 에서 .yml 파일 생성(.github/workflows/deploy.yml)
+  github repo 에서 .yml 파일 생성(.github/workflows/deploy.yml)
 
 name: Deploy to AWS S3 (Academy)
 
@@ -88,27 +88,27 @@ jobs:
 
 6. github 사이트내 Settings -> Deploy keys
 
-Title=Key 입력
+  Title=Key 입력
 
-aws_access_key_id=0000000
-aws_secret_access_key=0000000
-aws_session_token=0000000
+  aws_access_key_id=0000000
+  aws_secret_access_key=0000000
+  aws_session_token=0000000
 
-AWS Academy Leaders Lab 시작 페이지에서 AWS Details 클릭 후 ID, KEY, TOKEN 복사
+  AWS Academy Leaders Lab 시작 페이지에서 AWS Details 클릭 후 ID, KEY, TOKEN 복사
 
 
 8. Actions 진행 (로컬 or github)
 
-로컬에서
-git add .
-git commit -m "trigger deploy"
-git push
+  로컬에서
+  git add .
+  git commit -m "trigger deploy"
+  git push
 
-github 에서
-README.md 열기
-한줄 수정
-Commit changes
+  github 에서
+  README.md 열기
+  한줄 수정
+  Commit changes
 
 
 8. 웹사이트 연결
-해당 버킷 클릭 -> 정적 웹 사이트 호스팅 -> 버킷 웹 사이트 엔드포인트 URL 클릭!
+  해당 버킷 클릭 -> 정적 웹 사이트 호스팅 -> 버킷 웹 사이트 엔드포인트 URL 클릭!
