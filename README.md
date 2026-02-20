@@ -30,7 +30,7 @@ The project is deployed automatically using GitHub Actions and AWS.
 2. AWS S3 bucket 생성
 
 3. OS push
-—-----—-----—-----—-----—-----—-----—-----—-----—-----—-----—-----—-----
+
 로컬 프로젝트 폴더에서 
 git init
 git add .
@@ -38,10 +38,10 @@ git commit -m “init: 000000 app”
 git branch -M main
 git remote add origin https://github.com/sunmoirai/<repo>.git
 git push -u origin main
-—-----—-----—-----—-----—-----—-----—-----—-----—-----—-----—-----—-----
+
 
 4. yml 파일 생성
-—-----—-----—-----—-----—-----—-----—-----—-----—-----—-----—-----—-----
+
 github repo 에서 .yml 파일 생성(.github/workflows/deploy.yml)
 
 name: Deploy to AWS S3 (Academy)
@@ -82,7 +82,7 @@ jobs:
     - name: Deploy build files to S3
       run: |
         aws s3 sync dist/ s3://<mybucket name> --delete
-—-----—-----—-----—-----—-----—-----—-----—-----—-----—-----—-----—-----
+
 
 5. README.md 작성
 
@@ -96,6 +96,7 @@ aws_session_token=0000000
 
 AWS Academy Leaders Lab 시작 페이지에서 AWS Details 클릭 후 ID, KEY, TOKEN 복사
 
+
 8. Actions 진행 (로컬 or github)
 
 로컬에서
@@ -107,6 +108,7 @@ github 에서
 README.md 열기
 한줄 수정
 Commit changes
+
 
 8. 웹사이트 연결
 해당 버킷 클릭 -> 정적 웹 사이트 호스팅 -> 버킷 웹 사이트 엔드포인트 URL 클릭!
