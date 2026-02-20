@@ -42,6 +42,7 @@ git branch -M main
 git remote add origin https://github.com/sunmoirai/<repo>.git
 git push -u origin main
 
+
 ☁ Step 2. AWS S3 Bucket 생성
 
 AWS Academy 접속
@@ -104,7 +105,6 @@ GitHub Repository →
 Settings → Secrets and variables → Actions → New repository secret
 
 추가할 값:
-NAME                    Secret
 
 AWS_ACCESS_KEY_ID
 
